@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A</title>
+    <style>
+            div.tooltip {	
+                position: absolute;			
+                text-align: center;			
+                width: 60px;					
+                height: 28px;					
+                padding: 2px;				
+                font: 12px sans-serif;		
+                background: lightsteelblue;	
+                border: 0px;		
+                border-radius: 8px;			
+                pointer-events: none;			
+            }
+
+    p {
+        font-size: 14px;
+        color:#fff;
+        
+    }        
+
+    body{
+        position: relative;
+        background-color: black;
+        
+    }        
+
+    #chart{
+        overflow:visible;
+    }
+
+    .center {
+        position: absolute;
+        top:50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .svg {
+        position: absolute;
+        top:50%;
+        left:50%;
+    }        
+
+
+     .buttonGroup {
+        display: flex;
+        justify-content: center;
+        
+
+     }  
+
+     .buttonGroup button{
+        width:120px;
+        height:30px;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;   
+        outline: none;     
+        transition: transform .5s;
+     }   
+
+     .buttonGroup button:active{
+         transform: scale(1.2);
+     }  
+
+     .unselected {
+        background-color: rgb(77, 60, 224);
+
+     }
+
+     .selected{
+        background-color: rgb(12, 189, 50);
+     }
+
+     .buttonGroup button:nth-child(2){
+         margin:0 10px;
+     }
+     .buttonGroup button:nth-child(3){
+        margin-right:10px;
+     }
+
+     .tooltip {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         background-color: black;
+         color: #fff;
+         min-width: 120px;
+       
+     }
+
+    </style>
+</head>
+<body>
+
+    <div class="buttonGroup">
+        <p>Tree Structure</p>
+
+    </div>
+
+    <div id="chart">
+
+    </div>
+    <script src="./d3.js"></script>
+    <script src="./d3-selection-multi.js"></script>
+    <script type="text/javascript" src="./treedata.json"></script> 
+    <script src="./main.js"></script>
+</body>
+</html>
